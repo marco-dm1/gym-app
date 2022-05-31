@@ -1,22 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { Text, View, Button, ScrollView } from 'react-native';
+import { styles } from './styles'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-      <Button title="Test button"></Button>
+    <View style={styles.body}>
+      <View style={styles.header}>
+        <Text style={styles.title}>Gym Tracker and Weight Calculator</Text>
+      </View>
+      <ScrollView>
+        <View style={styles.workout}>
+          <Text>Open up App.js to start working on your app!</Text>
+          <Button title="Test button 1"></Button>
+        </View>
+
+      </ScrollView>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
