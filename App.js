@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Button, ScrollView } from 'react-native';
+import { Text, View, ScrollView, Alert } from 'react-native';
 import { styles } from './styles'
 
 export default function App() {
@@ -9,11 +9,14 @@ export default function App() {
         <Text style={styles.title}>Gym Tracker and Weight Calculator</Text>
       </View>
       <ScrollView>
-        <View style={styles.workout}>
-          <Text>Open up App.js to start working on your app!</Text>
-          <Button title="Test button 1"></Button>
+        <View style={styles.contentContainer}>
+          <View style={styles.workout}>
+            <Text style={styles.workoutTitle}>Arm Day Workout - 5/23/22</Text>
+          </View>
+          <View style={styles.exercise}>
+            <Text>3x10 @ 150lbs</Text>
+          </View>
         </View>
-
       </ScrollView>
     </View>
   );
